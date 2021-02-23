@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<a href="">Добавить задачу</a>
+<a href="tasks/add">Добавить задачу</a>
 
 {% for task in tasks %}
     <p>{{ task.pk }}) <a href="/task?id={{ task.id }}">{{ task.description}}</a></p>

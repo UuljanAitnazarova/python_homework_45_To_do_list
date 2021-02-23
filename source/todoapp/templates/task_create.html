@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Добавить задачу</h3>
+<form action="/tasks/add/" method="post">
+    {% csrf_token %}
+    <label>Описание</label>
+    <input type="text" name="description"><br/>
+    <label>
+        Статус: <select name="status">
+            {% for eng, rus in status_choice %}
+            <option value="{{eng}}">{{rus}}</option>
+            {% endfor %}
+        </select>
+    </label><br/>
+    <label>Дата выполнения</label><br/>
+    <input type="text" name="date_completed"><br/>
+    <input type="submit">
+</form>
+{% endblock %}
