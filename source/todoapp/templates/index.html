@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<h1>To Do List</h1>
+<a href="">Добавить задачу</a>
 
 {% for task in tasks %}
-    <p>{{ task.pk }}) <a href="">{{ task.description}}</a></p>
-    <p>Статус: {{ task.status }}</p>
+    <p>{{ task.pk }}) <a href="/task?id={{ task.id }}">{{ task.description}}</a></p>
+    <p>Статус: {{ task.get_status_display }}</p>
     {% if task.date_completed %}
         <p>Дата выполнения: {{ task.date_completed }}</p>
     {% endif %}
