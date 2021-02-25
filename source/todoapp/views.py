@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 
 from .models import Task
 
@@ -28,3 +28,15 @@ def task_create_view(request):
             date_completed= date_completed
         )
         return render(request, 'task_view.html', context = {'task': task})
+
+
+def task_delete_view(request):
+    task_id = request.GET.get('id')
+    task = Task.objects.get(id=task_id)
+
+    if request.method == 'POST':
+        task.delete()
+        return HttpResponseRedirect("/")
+    
+    return render(request, 'task_delete.html', context={'task': task})
+

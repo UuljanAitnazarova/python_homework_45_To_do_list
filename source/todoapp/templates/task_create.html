@@ -4,18 +4,21 @@
 
 <h3>Добавить задачу</h3>
 <form action="/tasks/add/" method="post">
-    {% csrf_token %}
-    <label>Описание</label>
-    <input type="text" name="description"><br/>
-    <label>
-        Статус: <select name="status">
-            {% for eng, rus in status_choice %}
-            <option value="{{eng}}">{{rus}}</option>
-            {% endfor %}
-        </select>
-    </label><br/>
-    <label>Дата выполнения</label><br/>
-    <input type="text" name="date_completed"><br/>
-    <input type="submit">
+    <div class="mb-3">
+        {% csrf_token %}
+        <label class="form-label">Описание</label>
+        <input type="text" class="form-control" name="description"><br/>
+        <label class="form-label">
+            Статус: <select name="status">
+                {% for eng, rus in status_choice %}
+                <option value="{{eng}}">{{rus}}</option>
+                {% endfor %}
+            </select>
+        </label><br/>
+        <label class="form-label">Дата выполнения</label><br/>
+        <input type="text" class="form-control" name="date_completed"><br/>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endblock %}

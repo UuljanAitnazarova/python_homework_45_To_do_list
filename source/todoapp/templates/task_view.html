@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h3> Детали задачи </h3>
-<p>Описание задачи: {{ task.description }}</p>
-<p>Статус: {{ task.get_status_display }}</p>
-{% if task.date_completed%}
-    <p>Дата выполнения: {{ task.date_completed }}</p>
-{% else %}
-    <p>Дата выполнения: не выполнено</p>
-{% endif %}
+    <h3> Детали задачи </h3>
+    <p>Описание задачи: {{ task.description }}</p>
+    <p>Статус: {{ task.get_status_display }}</p>
+    {% if task.date_completed%}
+        <p>Дата выполнения: {{ task.date_completed }}</p>
+    {% else %}
+        <p>Дата выполнения: не выполнено</p>
+    {% endif %}
+    <br/>
+    <a href="delete?id={{ task.id }}">Удалить задачу</a>
 {% endblock %}

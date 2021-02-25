@@ -1,13 +1,21 @@
 {% extends 'base.html' %}
-
 {% block content%}
-<a href="tasks/add">Добавить задачу</a>
+    <div class="card text-center border-0">
+        <div class="card-body">
+        <h5 class="card-title">Хотите быть еще продуктивнее?</h5>
+        <a href="tasks/add" class="btn btn-primary">Добавить задачу</a>
+        </div>
+    </div>
+    <div class="to_do_list">
+        <ul class="list-group list-group-flush"></ul>
+        {% for task in tasks %}
+            <a href="/task?id={{ task.id }}">{{ task.description}}</a></p>
+                <p>Статус: {{ task.get_status_display }}</p>
+                {% if task.date_completed %}
+                    <p>Дата выполнения: {{ task.date_completed }}</p>
+                {% endif %}
+        {% endfor %}
+        </ul>
+    </div> 
 
-{% for task in tasks %}
-    <p>{{ task.pk }}) <a href="/task?id={{ task.id }}">{{ task.description}}</a></p>
-    <p>Статус: {{ task.get_status_display }}</p>
-    {% if task.date_completed %}
-        <p>Дата выполнения: {{ task.date_completed }}</p>
-    {% endif %}
-{% endfor %}
 {% endblock %}
