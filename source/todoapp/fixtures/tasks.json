@@ -1,0 +1,47 @@
+[
+{
+  "model": "todoapp.task",
+  "pk": 1,
+  "fields": {
+    "description": "Первое задание",
+    "status": "new",
+    "date_completed": null
+  }
+},
+{
+  "model": "todoapp.task",
+  "pk": 2,
+  "fields": {
+    "description": "Второе задание",
+    "status": "new",
+    "date_completed": null
+  }
+},
+{
+  "model": "todoapp.task",
+  "pk": 4,
+  "fields": {
+    "description": "Еще задание",
+    "status": "В процессе",
+    "date_completed": null
+  }
+},
+{
+  "model": "todoapp.task",
+  "pk": 16,
+  "fields": {
+    "description": "Купить сыр",
+    "status": "new",
+    "date_completed": null
+  }
+},
+{
+  "model": "todoapp.task",
+  "pk": 17,
+  "fields": {
+    "description": "Сделать презентацию",
+    "status": "done",
+    "date_completed": "2019-12-19"
+  }
+}
+]
