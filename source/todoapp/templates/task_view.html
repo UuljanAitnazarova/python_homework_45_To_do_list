@@ -9,6 +9,7 @@
     {% else %}
         <p>Дата выполнения: не выполнено</p>
     {% endif %}
+    <p>Полное описание задачи: {{ task.full_description}}</p>
     <br/>
-    <a href="delete?id={{ task.id }}">Удалить задачу</a>
+    <a href="{% url 'task_delete' task.pk %}">Удалить задачу</a>
 {% endblock %}

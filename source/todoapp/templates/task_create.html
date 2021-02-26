@@ -8,6 +8,8 @@
         {% csrf_token %}
         <label class="form-label">Описание</label>
         <input type="text" class="form-control" name="description"><br/>
+        <label class="form-label">Полное описание</label>
+        <input type="text" class="form-control" name='full_description'></br>
         <label class="form-label">
             Статус: <select name="status">
                 {% for eng, rus in status_choice %}
