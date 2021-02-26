@@ -4,6 +4,7 @@
   "pk": 1,
   "fields": {
     "description": "Первое задание",
+    "full_description": "полное описание задания",
     "status": "new",
     "date_completed": null
   }
@@ -13,6 +14,7 @@
   "pk": 2,
   "fields": {
     "description": "Второе задание",
+    "full_description": "полное описание задания",
     "status": "new",
     "date_completed": null
   }
@@ -22,16 +24,8 @@
   "pk": 4,
   "fields": {
     "description": "Еще задание",
+    "full_description": "полное описание задания",
     "status": "В процессе",
-    "date_completed": null
-  }
-},
-{
-  "model": "todoapp.task",
-  "pk": 16,
-  "fields": {
-    "description": "Купить сыр",
-    "status": "new",
     "date_completed": null
   }
 },
@@ -40,7 +34,28 @@
   "pk": 17,
   "fields": {
     "description": "Сделать презентацию",
+    "full_description": "полное описание задания",
     "status": "done",
+    "date_completed": "2019-12-19"
+  }
+},
+{
+  "model": "todoapp.task",
+  "pk": 18,
+  "fields": {
+    "description": "wdfcsw",
+    "full_description": "полное описание задания",
+    "status": "done",
+    "date_completed": "2019-12-20"
+  }
+},
+{
+  "model": "todoapp.task",
+  "pk": 19,
+  "fields": {
+    "description": "csw",
+    "full_description": "полное описание задания",
+    "status": "in_progress",
     "date_completed": "2019-12-19"
   }
 }
