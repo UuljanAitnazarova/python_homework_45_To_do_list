@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
-{% block content%}
-    <div class="to_do_list">
-        <ul class="list-group list-group-flush"></ul>
-        {% for task in tasks %}
-            <a href="{% url 'task_view' task.id %}">{{ task.description}}</a></p>
-                <p>Статус: {{ task.get_status_display }}</p>
-                {% if task.date_completed %}
-                    <p>Дата выполнения: {{ task.date_completed }}</p>
-                {% endif %}
-        {% endfor %}
-        </ul>
-    </div> 
 
-{% endblock %}
+{% block menu %}<li><a href='{% url "task_create" %}'>Добавить задачу</a></li>{% endblock menu %}
+
+
+{% block page_header %}Все задачи{% endblock page_header %}
+
+{% block content %}
+    {% if not tasks %}
+        <h2>НЕТ ЗАДАЧ</h2>
+    {% endif %}
+
+    {% for task in tasks %} 
+        <p><a href='{% url "task_view" task.id %}'>{{ task.description }}</a></p>
+        {% if task.date_completed %}
+            <p>Дата выполнения : {{ task.date_completed }} </p>
+        {% else %}
+            <p>Задание еще не выполнено </p>
+        {% endif %}
+        <p>Статус : {{ task.get_status_display }}</p>
+        
+    {% endfor %}
+{% endblock content %}

@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 
+{% block menu %}
+    <li><a href='{% url "task_create" %}'>Добавить задачу</a></li>
+    <li><a href='{% url "task_update"  task.id %}'>Редактировать задачу</a></li>
+    <li><a href='{% url "task_delete" task.id %}'>Удалить задачу</a></li>
+{% endblock menu %}
+
+{% block page_header %}Детали задачи {{ article.id }}{% endblock page_header %}
+
 {% block content %}
-    <h3> Детали задачи </h3>
     <p>Описание задачи: {{ task.description }}</p>
     <p>Статус: {{ task.get_status_display }}</p>
     {% if task.date_completed%}
@@ -13,3 +20,5 @@
     <br/>
     <a href="{% url 'task_delete' task.pk %}">Удалить задачу</a>
 {% endblock %}
+
+

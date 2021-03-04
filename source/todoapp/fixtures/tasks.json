@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "description": "Первое задание",
-    "full_description": "полное описание задания",
+    "full_description": "Описание первого задания",
     "status": "new",
     "date_completed": null
   }
@@ -14,7 +14,7 @@
   "pk": 2,
   "fields": {
     "description": "Второе задание",
-    "full_description": "полное описание задания",
+    "full_description": "Описание второе задания ",
     "status": "new",
     "date_completed": null
   }
@@ -23,8 +23,8 @@
   "model": "todoapp.task",
   "pk": 4,
   "fields": {
-    "description": "Еще задание",
-    "full_description": "полное описание задания",
+    "description": "Третье задание",
+    "full_description": "Описание третьего задания",
     "status": "В процессе",
     "date_completed": null
   }
@@ -33,8 +33,8 @@
   "model": "todoapp.task",
   "pk": 17,
   "fields": {
-    "description": "Сделать презентацию",
-    "full_description": "полное описание задания",
+    "description": "Четвертое задание",
+    "full_description": "Описание четвертого задания",
     "status": "done",
     "date_completed": "2019-12-19"
   }
@@ -43,20 +43,10 @@
   "model": "todoapp.task",
   "pk": 18,
   "fields": {
-    "description": "wdfcsw",
-    "full_description": "полное описание задания",
+    "description": "Пятое задание",
+    "full_description": "Описание пятого задания",
     "status": "done",
     "date_completed": "2019-12-20"
-  }
-},
-{
-  "model": "todoapp.task",
-  "pk": 19,
-  "fields": {
-    "description": "csw",
-    "full_description": "полное описание задания",
-    "status": "in_progress",
-    "date_completed": "2019-12-19"
   }
 }
 ]
